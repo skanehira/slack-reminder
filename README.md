@@ -8,6 +8,8 @@
 # slack-reminder
 Slack remind generator
 
+https://user-images.githubusercontent.com/7888591/118012582-30c5e100-b38c-11eb-9b73-b6af95a3b74d.mov
+
 ## Why
 Slack's `/reminder` is very hard to use.
 
@@ -21,9 +23,27 @@ $ go install github.com/skanehira/slack-reminder@latest
 ```
 
 ## Usage
-
+### onetime reminder
 ```sh
-$ slack-reminder
+MacbookPro13% slack-reminder
+? Kind of remind onetime
+? Date(YYYY-MM-DD) 2020-05-13
+? Hour(HH:MM) 10:00
+? @someone or #channel or me @gorilla
+? Message hello, I'm here.
+/remind @gorilla "hello, I'm here." at 10:00 on 2020-05-13
+```
+### repetition reminder
+```sh
+MacbookPro13% slack-reminder
+? Kind of remind repetition
+? What kind of repetition every week
+? What day of week choice
+? Choice days Tuesday, Thursday, Sunday
+? Hour(HH:MM) 10:00
+? @someone or #channel or me me
+? Message some remind
+/remind me "some remind" at 10:00 on every Tuesday ,Thursday ,Sunday
 ```
 
 ## Author

@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"os"
 
+	"github.com/skanehira/slack-reminder/survey"
 	"github.com/spf13/cobra"
 )
 
@@ -18,7 +19,9 @@ func exitError(msg interface{}) {
 
 func Execute() {
 	rootCmd.Run = func(cmd *cobra.Command, args []string) {
-		_ = rootCmd.Help()
+		if err := survey.Ask(); err != nil {
+			exitError(err)
+		}
 	}
 
 	if err := rootCmd.Execute(); err != nil {

@@ -6,6 +6,10 @@
 ![GitHub Release Status](https://img.shields.io/github/workflow/status/skanehira/slack-reminder/Release?label=release)
 
 # slack-reminder
+Slack remind generator
+
+## Why
+Slack's `/reminder` is very hard to use.
 
 ## Required
 - Go 1.16 ~

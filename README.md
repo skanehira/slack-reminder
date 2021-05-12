@@ -1,25 +1,26 @@
-![GitHub Repo stars](https://img.shields.io/github/stars/skanehira/go-cli-template?style=social)
-![GitHub](https://img.shields.io/github/license/skanehira/go-cli-template)
-![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/skanehira/go-cli-template)
-![GitHub all releases](https://img.shields.io/github/downloads/skanehira/go-cli-template/total)
-![GitHub CI Status](https://img.shields.io/github/workflow/status/skanehira/go-cli-template/ci?label=CI)
-![GitHub Release Status](https://img.shields.io/github/workflow/status/skanehira/go-cli-template/Release?label=release)
+![GitHub Repo stars](https://img.shields.io/github/stars/skanehira/slack-reminder?style=social)
+![GitHub](https://img.shields.io/github/license/skanehira/slack-reminder)
+![GitHub go.mod Go version](https://img.shields.io/github/go-mod/go-version/skanehira/slack-reminder)
+![GitHub all releases](https://img.shields.io/github/downloads/skanehira/slack-reminder/total)
+![GitHub CI Status](https://img.shields.io/github/workflow/status/skanehira/slack-reminder/ci?label=CI)
+![GitHub Release Status](https://img.shields.io/github/workflow/status/skanehira/slack-reminder/Release?label=release)
 
-# go-cli-template
-This is template that help you to quick implement some CLI using Go.
+# slack-reminder
 
-This repository is contains following.
+## Required
+- Go 1.16 ~
 
-- minimal CLI implementation using [spf13/cobra](https://github.com/spf13/cobra)
-- CI/CD
-  - golangci-lint
-  - go test
-  - goreleaser
+## Insltallation
 
-## How to use
-1. fork this repository
-2. replace `skanehira` to your user name using `sed`(or others)
-3. run `make init`
+```go
+$ go install github.com/skanehira/slack-reminder@latest
+```
+
+## Usage
+
+```sh
+$ slack-reminder
+```
 
 ## Author
 skanehira

@@ -3,6 +3,7 @@ package survey
 import (
 	"fmt"
 	"regexp"
+	"time"
 
 	"github.com/AlecAivazis/survey/v2"
 )
@@ -20,6 +21,7 @@ var qsDate = &survey.Question{
 	Name: "Date",
 	Prompt: &survey.Input{
 		Message: "Date(YYYY-MM-DD)",
+		Default: time.Now().Format("2006-01-02"),
 	},
 	Validate: ValidateDate,
 }

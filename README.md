@@ -16,7 +16,7 @@ Slack's `/reminder` is very hard to use.
 ## Required
 - Go 1.16 ~
 
-## Insltallation
+## Installation
 
 ```go
 $ go install github.com/skanehira/slack-reminder@latest

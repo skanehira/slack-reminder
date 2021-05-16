@@ -46,7 +46,7 @@ func (rd RepeatEveryDay) String() string {
 const (
 	Weekday = "weekday"
 	Weekend = "Saturday, Sunday"
-	Choice  = "choice"
+	Choice  = "Choice"
 )
 
 var (

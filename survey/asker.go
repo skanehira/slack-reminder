@@ -49,7 +49,7 @@ func askEveryWeek() (When, error) {
 		if err := survey.AskOne(s, &days, survey.WithValidator(survey.Required)); err != nil {
 			return nil, err
 		}
-		everyWeek.Day = strings.Join(days, " ,")
+		everyWeek.Day = strings.Join(days, ", ")
 	}
 	return everyWeek, nil
 }

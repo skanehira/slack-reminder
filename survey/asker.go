@@ -5,6 +5,7 @@ import (
 	"strings"
 
 	"github.com/AlecAivazis/survey/v2"
+	"github.com/atotto/clipboard"
 )
 
 func askOnetime() (When, error) {
@@ -173,6 +174,13 @@ func Ask() error {
 			},
 			Validate: survey.Required,
 		},
+		{
+			Name: "Clipboard",
+			Prompt: &survey.Confirm{
+				Message: "Copy reminder to clipboard?",
+				Default: true,
+			},
+		},
 	}
 
 	err := survey.Ask(qs, &answer)
@@ -180,6 +188,12 @@ func Ask() error {
 		return err
 	}
 
-	fmt.Println(answer)
+	if answer.Clipboard {
+		clipboard.WriteAll(answer.String())
+		fmt.Printf("The following reminder was copied to the clipboard: %s\n", answer)
+	} else {
+		fmt.Println(answer)
+	}
+
 	return nil
 }

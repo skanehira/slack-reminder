@@ -2,7 +2,6 @@ package survey
 
 import (
 	"fmt"
-	"log"
 	"strings"
 
 	"github.com/AlecAivazis/survey/v2"
@@ -191,7 +190,7 @@ func Ask() error {
 
 	if answer.Clipboard {
 		if err := clipboard.WriteAll(answer.String()); err != nil {
-			log.Fatal(err)
+			return err
 		}
 
 		fmt.Printf("The following reminder was copied to the clipboard: %s\n", answer)

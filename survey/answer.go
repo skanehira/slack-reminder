@@ -107,6 +107,7 @@ func (ry RepeatEveryYear) String() string {
 }
 
 type Answer struct {
+	Clipboard   bool
 	Destination string
 	Message     string
 	When        When

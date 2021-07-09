@@ -15,7 +15,7 @@ func askOnetime() (When, error) {
 	}
 
 	var onetime Onetime
-	err := survey.Ask(qs, &onetime)
+	err := survey.Ask(qs, &onetime, survey.WithShowCursor(true))
 	return onetime, err
 }
 
@@ -125,7 +125,7 @@ func askRepetition() (When, error) {
 		return nil, err
 	}
 
-	if err := survey.Ask([]*survey.Question{qsHour}, when); err != nil {
+	if err := survey.Ask([]*survey.Question{qsHour}, when, survey.WithShowCursor(true)); err != nil {
 		return nil, err
 	}
 	return when, nil
@@ -183,7 +183,7 @@ func Ask() error {
 		},
 	}
 
-	err := survey.Ask(qs, &answer)
+	err := survey.Ask(qs, &answer, survey.WithShowCursor(true))
 	if err != nil {
 		return err
 	}

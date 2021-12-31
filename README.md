@@ -8,7 +8,7 @@
 # slack-reminder
 Slack remind generator
 
-https://user-images.githubusercontent.com/7888591/118012582-30c5e100-b38c-11eb-9b73-b6af95a3b74d.mov
+![](https://i.gyazo.com/1c8d4750ab8ae601029a00cf58faa89b.gif)
 
 ## Why
 Slack's `/reminder` is very hard to use.
